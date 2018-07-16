@@ -1,0 +1,254 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+        <Headerbtns :title = page_title>
+            <div slot="left" class="back" @click="pre">
+                <i class="fa fa-angle-left"></i>
+            </div>
+        </Headerbtns>   
+        <div id="maincontent" class="manage-main-contents">
+            <div class="normal_body">
+                <img src="../../../../static/img/productManual/productView/img/headerImage_fybn.png" style="width: 100%" alt="">
+                <div class="product_hot">
+                    <div class="hotProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            产品卖点:
+                        </p>
+                    </div>
+                    <div class="hotProduct_content">
+                        <h4>老有所养，长寿无忧</h4>
+                        <p>养老金最长可领取至百岁，无忧生活，一生尊享。给付总额有保底，保证给付金额为“前二十年年金”与“已交保费的1.1倍”两者取大。</p>
+                        <p>养老金按首期年领养老金的5%递增，最高可增至首期养老金的两倍，保证品质生活。</p>
+                        <p>养老金可放到累计账户进行复利累积，最需要时领取。88岁额外给付一倍保额的祝寿金。</p>
+                        <h4>岁岁分红，锦上添花</h4>
+                        <p>每年至少将可分配盈余的70%分给客户，并可复利累积。</p>
+                        <h4>领取年领，自由选择</h4>
+                        <p>有多达4种年金领取年领（50、55、60、65岁）可以选择。</p>
+                    </div>
+                </div>
+                <div class="product_juli">
+                    <div class="juliProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            投保举例:
+                        </p>
+                    </div>
+                    <div class="juliProduct_content">
+                        <div class="juliProduct_img">
+                            <img src="../../../../static/img/productManual/男性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                            <div style="display: inline-block;width: 70%">
+                                <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">何先生 30周岁</p>
+                                <p style="color: #fba61b">投保了保额为200万元的“福运百年”，并设定养老金领取年龄为60岁。何先生选择分20年交费，年交保费为213,740元，总计需交费
+                                    约427万元。何先生将获得如下保险利益:</p>
+                            </div>
+                        </div>
+                        <br>
+                        <h5><span id="tuoyuan1_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 1 &nbsp;</span>自60周岁起，何先生开始领取年金，首期为200,000元，以后依次每年递增5%，即61周岁领取21000元，直至80周岁领取400,000元，之后每年不再增长。</h5>
+                        <h5><span id="tuoyuan2_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 2 &nbsp;</span>20年保证给付期内的养老金总额为590万元，若何先生在保证给付期内身故，我们将一次性支付590万与已支付年金的差额。</h5>
+                        <h5><span id="tuoyuan3_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 3 &nbsp;</span>至何先生88周岁保单周年日，何先生总共可领取养老金+祝寿金+累计中档红利共约1053万元。</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <alert ref="alert"></alert>
+	</div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'fybnylnjf',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+        document.getElementById('tuoyuan1_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan2_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan3_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

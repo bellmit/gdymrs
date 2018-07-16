@@ -1,0 +1,249 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+    <Headerbtns :title = page_title>
+        <div slot="left" class="back" @click="pre">
+            <i class="fa fa-angle-left"></i>
+        </div>
+    </Headerbtns>   
+    <div id="maincontent" class="manage-main-contents">
+        <div class="normal_body">
+            <img src="../../../../static/img/productManual/productView/img/headerImage_kawy.png" style="width: 100%" alt="">
+            <div class="product_hot">
+                <div class="hotProduct_header">
+                    <p class="orangeTitle" style="margin-left: 3%">
+                        产品卖点:
+                    </p>
+                </div>
+                <div class="hotProduct_content">
+                    <h4>聚焦癌症 保障无忧</h4>
+                    <p>保障覆盖千余项癌症，一经确诊即可进行全额理赔，在紧要关头助您坦然应对。</p>
+                    <h4>高发病种 关爱无忧</h4>
+                    <p>针对发病率最高的肺癌提供1.5倍保额给付、胃癌及肝癌提供1.3倍保额给付，在特别之处为您提供额外关怀。</p>
+                    <h4>费率再降 投入无忧 </h4>
+                    <p>寿险费率市场化后首批健康保障类产品，价格优势突出，在众多选择中为您优中选廉。</p>
+                    <h4>保证续保 服务无忧 </h4>
+                    <p>保险期满后，还可选择保证续保，最长保障可达20年，在人生的关键阶段与您时刻相伴。</p>
+                </div>
+            </div>
+            <div class="product_juli">
+                <div class="juliProduct_header">
+                    <p class="orangeTitle" style="margin-left: 3%">
+                        投保举例:
+                    </p>
+                </div>
+                <div class="juliProduct_content">
+                    <div class="juliProduct_img">
+                        <img src="../../../../static/img/productManual/男性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                        <div style="display: inline-block;width: 70%">
+                            <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">康先生 25周岁</p>
+                            <p style="color: #fba61b">是一名新晋职场白领，月收入2900元，在为事业打拼的同时，不忘为自已寻找一家“健康银行”，经过精心挑选，购买了“光大永明康爱无忧更新型疾病保险”，保险金额50万元，年交保费700元，交费期5年，平均每天保费投入不到两元钱，他将获得最高达75万的癌症保障，具体的保险利益演示如下：</p>
+                        </div>
+                    </div>
+                    <br>
+                    <img src="../../../../static/img/productManual/productView/img/contentImage_kawy.png" alt="" style="width: 100%">
+                    <p>*注:若被保险人因罹患癌症导致身故的，我们仅承担癌症保险责任。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <alert ref="alert"></alert>
+	</div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'kawyfax',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

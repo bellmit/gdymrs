@@ -1,0 +1,259 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+        <Headerbtns :title = page_title>
+            <div slot="left" class="back" @click="pre">
+                <i class="fa fa-angle-left"></i>
+            </div>
+        </Headerbtns>   
+        <div id="maincontent" class="manage-main-contents">
+            <div class="normal_body">
+                <div class="product_hot">
+                    <div class="hotProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            产品卖点:
+                        </p>
+                    </div>
+                    <div class="hotProduct_content">
+                        <h4>万能搭配 二次增值</h4>
+                        <p> 一次投入，终身相伴。客户投保后即可设立专属万能账户，通过与其他年金
+                            产品的搭配组合，生存金与红利可进入万能账户，分阶段累积领取，实现财
+                            富二次增值。</p>
+                        <h4>利益透明 回报稳定</h4>
+                        <p>万能账户设有2.5%的最低保证利率，保单初始扣费低至1%，公司每月公布万
+                            能账户实际结算利率，保障利益透明，回报稳定可持续。</p>
+                        <h4>领取灵活 从容不迫</h4>
+                        <p>在保险合同有效期内且犹豫期满后，投保人可随时申请领取部分个人账户价值
+                            ；保险合同生效满十年后，被保险人还可申请领取年金，经本公司审核同意后
+                            ，于审核通过日后的每个保险单周年日，按照当时个人账户价值的10%向被保
+                            险人给付年金，满足您的资金多样化需求。</p>
+                        <p style="color: red">注:在同一保单年度内，保险合同的累计年金领取和部分领取金额之和以保险合同已交保险费的20%为限。</p>
+                        <h4>保单借款 周转灵便</h4>
+                        <p>若您急需周转资金，可申请最高额度为合同现金价值净额80%的保险单借款，充
+                            分满足资金流动性需求。</p>
+                    </div>
+                </div>
+                <div class="product_juli">
+                    <div class="juliProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            投保举例:
+                        </p>
+                    </div>
+                    <div class="juliProduct_content">
+                        <div class="juliProduct_img">
+                            <img src="../../../../static/img/productManual/男性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                            <div style="display: inline-block;width: 70%">
+                                <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">曾先生 30周岁</p>
+                                <p style="color: #fba61b">于前五个保单年度，每年初追加保费10万元，期间没有发生部分领取和年金领取，利益演示如下：</p>
+                            </div>
+                        </div>
+                        <br>
+                        <img src="../../../../static/img/productManual/productView/img/contentImage_zlb.png" width="100%" alt="">
+                        <p>温馨提示:</p>
+                        <p>上表的结算利率假设为：低档2.5%；中档4.5%；高档6.0%。该利益演示是基于公司的精算及其他假设，
+                            不代表公司的历史经营业绩，也不代表对公司未来经营业绩的预期，最低保证利率之上的投资收益是不确定的，实际
+                            个人账户利益可能低于中、高档利益演示水平。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <alert ref="alert"></alert>
+	</div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'zlbnjbx',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

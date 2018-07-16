@@ -1,0 +1,262 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+        <Headerbtns :title = page_title>
+            <div slot="left" class="back" @click="pre">
+                <i class="fa fa-angle-left"></i>
+            </div>
+        </Headerbtns>   
+        <div id="maincontent" class="manage-main-contents">
+            <div class="normal_body">
+                <img src="../../../../static/img/productManual/productView/img/image11.jpg" style="width: 100%;height: 300px" alt="">
+                <img src="../../../../static/img/productManual/productView/img/image12.jpg" style="width: 100%;height: 300px" alt="">
+                <img src="../../../../static/img/productManual/productView/img/image13.jpg" style="width: 100%;height: 300px" alt="">
+                <div class="product_hot">
+                    <div class="hotProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            产品卖点:
+                        </p>
+                    </div>
+                    <div class="hotProduct_content">
+                        <p>安鑫二号年金保险、安鑫三号年金保险是银保渠道销售的两款固定收益类年</p>
+                        <p>金保险，具有时间短、收益确定、回报稳定的特点，具体卖点如下：</p>
+                        <h4>利益固定，安鑫回报</h4>
+                        <p>现金价值在合同中载明，一经投保，利益锁定，保障您“看得见，算得出，领得到”的财富。</p>
+                        <h4>生存给付，安鑫返还</h4>
+                        <p>保单持有满五年即可获得充足的现金价值；继续持有，每年可获得5%基本保险金额的生存保险金直至满期；满期日还可另外领取一笔满期保险金。</p>
+                        <h4>保单借款，安鑫融通</h4>
+                        <p>可申请保险单借款以应不时之需，累积借款总额最高可达现金价值净额的80%，充分保障资金流动性。</p>
+                        <h4>免检免核，安鑫投保</h4>
+                        <p>投保范围老少皆宜，从0岁婴儿至70周岁老人均可作为被保险人；投保流程方便快捷，无需体检或财务核保。</p>
+                    </div>
+                </div>
+                <div class="product_juli">
+                    <div class="juliProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            投保举例:
+                        </p>
+                    </div>
+                    <div class="juliProduct_content">
+                        <div class="juliProduct_img">
+                            <img src="../../../../static/img/productManual/女性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                            <div style="display: inline-block;width: 70%">
+                                <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">安女士 35周岁</p>
+                                <p style="color: #fba61b">在理财经理推荐下购买“光大永明安鑫三号年金保险”。年交保费10万元，3年合计30万。</p>
+                            </div>
+                        </div>
+                        <br>
+                        <h5><span id="tuoyuan1_span" style="background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 1 &nbsp;</span>在持有满五年后，保单现金价值为350,300元 ；</h5>
+                        <h5><span id="tuoyuan2_span" style="background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 2 &nbsp;</span>从第六年开始，每年领取生存金16785元；十年满期日，领取给付满期保险金335700元。</h5>
+                        <h5><span id="tuoyuan3_span" style="background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 3 &nbsp;</span>持有期间，钱先生获得身故或高残保障，急需用钱可申请保单贷款，确保资金流动性。</h5>
+                        <img src="../../../../static/img/productManual/productView/img/ax23h.jpg" width="100%" alt="">
+                        <p>温馨提示:</p>
+                        <p>1.对于保险合同的身故保险金以及高度残疾保险金，本公司仅给付其中的一项。</p>
+                        <p>2.上表中演示的年龄、各项保险金、现金价值均为对应的保险单年度末的数值。</p>
+                        <p>3.“现金价值”不包含保险单年度末应给付的“生存保险金”与“满期保险金”。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <alert ref="alert"></alert>
+    </div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'ax3h',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+        document.getElementById('tuoyuan1_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan2_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan3_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

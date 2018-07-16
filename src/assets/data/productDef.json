@@ -1,0 +1,1405 @@
+{
+    "packageList": {
+        "packages": {
+            "header": {
+                "requestType": "PRODUCTDEFLIST",
+                "responseCode": "0",
+                "errorMessage": "Success:加载产品定义成功",
+                "uuid": "",
+                "comId": "HT20151001",
+                "from": "PAD",
+                "orderSerial": "orderId",
+                "asyn": "",
+                "returnUrl": "",
+                "comSerial": "comSerial",
+                "productCode": ""
+            },
+            "response": {
+                "productDefList": [
+                    {
+                        "attList": [
+                            {
+                                "attValueList": [
+                                    {
+                                        "className": "ProductAttributeItem",
+                                        "code": "year",
+                                        "text": "年交"
+                                    }
+                                ],
+                                "attCode": "payMode",
+                                "attName": "缴费方式",
+                                "attViewType": "1",
+                                "className": "ProductAttribute"
+                            },
+                            {
+                                "attValueList": [
+                                    {
+                                        "className": "ProductAttributeItem",
+                                        "code": "term_5",
+                                        "text": "5年期"
+                                    },
+                                    {
+                                        "className": "ProductAttributeItem",
+                                        "code": "term_10",
+                                        "text": "10年期"
+                                    },
+                                    {
+                                        "className": "ProductAttributeItem",
+                                        "code": "term_15",
+                                        "text": "15年期"
+                                    },
+                                    {
+                                        "className": "ProductAttributeItem",
+                                        "code": "term_20",
+                                        "text": "20年期"
+                                    }
+                                ],
+                                "attCode": "payPeriod",
+                                "attName": "交费期限",
+                                "attViewType": "1",
+                                "className": "ProductAttribute"
+                            },
+                            {
+                                "attValueList": [
+                                    {
+                                        "className": "ProductAttributeItem",
+                                        "code": "to_full",
+                                        "text": "保终身"
+                                    }
+                                ],
+                                "attCode": "policyPeriod",
+                                "attName": "保险期限",
+                                "attViewType": "1",
+                                "className": "ProductAttribute"
+                            },
+                            {
+                                "attValueList": [],
+                                "attCode": "amount",
+                                "attName": "保险金额",
+                                "attViewType": "2",
+                                "className": "ProductAttribute"
+                            }
+                        ],
+                        "baseAmount": "100000.0",
+                        "bind": "0",
+                        "bindCode": "HCT008",
+                        "bindExtraList": [
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "100000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HCT008",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HCT008",
+                                "productName": "光大永明附加关爱永逸重大疾病保险（2018版）",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "thunder",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "healthy1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "changqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@1072dda9"
+                                    }
+                                ]
+                            }
+                        ],
+                        "className": "ProposalProductDef",
+                        "coreCode": "LBT029",
+                        "extraList": [
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "100000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HCT008",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HCT008",
+                                "productName": "光大永明附加关爱永逸重大疾病保险（2018版）",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "thunder",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "healthy1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "changqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@1072dda9"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "amount",
+                                        "attName": "保险金额",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HMT001",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HMT001",
+                                "productName": "光大永明附加个人意外伤害医疗保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "medical",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "duanqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@265a892c"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 10.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "single",
+                                                "text": "趸交"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_5",
+                                                "text": "5年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_10",
+                                                "text": "10年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_20",
+                                                "text": "20年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_55_full",
+                                                "text": "交至55周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_60_full",
+                                                "text": "交至60周岁"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_5",
+                                                "text": "5年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_10",
+                                                "text": "10年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_20",
+                                                "text": "20年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_55",
+                                                "text": "至55周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_60",
+                                                "text": "至60周岁"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "amount",
+                                        "attName": "保险金额",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "LLT006",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "LLT006",
+                                "productName": "光大永明附加定期寿险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "life",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "INSURE_V",
+                                        "#text": "case(PAY_VALUE > 30.0, INSURE_VALUE - AGE, INSURE_VALUE)"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "rlife1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "changqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@1e3bb60"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 30.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "计划一"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_2",
+                                                "text": "计划二"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_3",
+                                                "text": "计划三"
+                                            }
+                                        ],
+                                        "attCode": "rank",
+                                        "attName": "档次",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HMT009",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HMT009",
+                                "productName": "光大永明附加住院医疗保险(A款)",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "medical",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "duanqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@e229c98"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 40.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "piece",
+                                        "attName": "份数",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HMT008",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HMT008",
+                                "productName": "光大永明无忧住院医疗保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "medical",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "3"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "duanqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@256c668"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "piece",
+                                        "attName": "份数",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HMT007",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HMT007",
+                                "productName": "光大永明无忧住院津贴医疗保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "medical",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "3"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "duanqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@efbd70b"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "single",
+                                                "text": "趸交"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_3",
+                                                "text": "3年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_5",
+                                                "text": "5年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_10",
+                                                "text": "10年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_12_full",
+                                                "text": "交至12周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_15_full",
+                                                "text": "交至15周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_18_full",
+                                                "text": "交至18周岁"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_25",
+                                                "text": "至25岁"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "amount",
+                                        "attName": "保险金额",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HDT023",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HDT023",
+                                "productName": "光大永明附加少儿重大疾病保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "thunder",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "changqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@37e31adc"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 10.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "exempt1",
+                                                "text": "豁免期间"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "exempt1",
+                                                "text": "豁免期间"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HDT024",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HDT024",
+                                "productName": "光大永明附加投保人豁免保险费重大疾病保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "thunder",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "sex",
+                                        "#text": "APPLICANT.GENDER"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "age",
+                                        "#text": "APPLICANT.AGE"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "changqi"
+                                    },
+                                    {
+                                        "@key": "sumPremium",
+                                        "#text": "VAR product = PLAN.PRODUCTS\nVAR zhuP = 0.0\nVAR fuP = 0.0\nVAR sum = 0.0\nVAR Zpay = ''\nVAR Fpay = ''\nVAR num = 0.0\nFOR (VAR i = 0.0; i < size(product); i++)\n{\n    VAR p = product[i]\n    IF (p.MAIN == 'yes')\n    {\n        zhuP = zhuP + p.PREMIUM\n        Zpay = p.PAY_CODE\n    }\n    IF (p.DEF_ID <> 'HDT024' AND p.MAIN == 'no' AND p.QXFL == 'changqi')\n    {\n        num++\n        Fpay = p.PAY_CODE\n        IF (Zpay == Fpay OR Fpay == 'parent')\n        {\n            fuP = fuP + p.PREMIUM\n        }\n    }\n    sum = zhuP + fuP\n}\nRETURN sum"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@1ef87e2e"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 30.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_3",
+                                                "text": "3年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_5",
+                                                "text": "5年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_10",
+                                                "text": "10年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_15",
+                                                "text": "15年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_20",
+                                                "text": "20年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_30",
+                                                "text": "30年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_45_full",
+                                                "text": "交至45周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_50_full",
+                                                "text": "交至50周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_55_full",
+                                                "text": "交至55周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_60_full",
+                                                "text": "交至60周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_65_full",
+                                                "text": "交至65周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_70_full",
+                                                "text": "交至70周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "single",
+                                                "text": "趸交"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_20",
+                                                "text": "20年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_30",
+                                                "text": "30年期"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_45",
+                                                "text": "至45周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_50",
+                                                "text": "至50周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_55",
+                                                "text": "至55周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_60",
+                                                "text": "至60周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_70",
+                                                "text": "至70周岁"
+                                            },
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "to_75",
+                                                "text": "至75周岁"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "amount",
+                                        "attName": "保险金额",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "AAT041",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "AAT041",
+                                "productName": "光大永明附加安驾宝交通意外伤害保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "accident",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "accident1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "changqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@530c1ac9"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 40.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            },
+                            {
+                                "attList": [
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "parent",
+                                                "text": "同主险"
+                                            }
+                                        ],
+                                        "attCode": "payMode",
+                                        "attName": "缴费方式",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "payPeriod",
+                                        "attName": "交费期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [
+                                            {
+                                                "className": "ProductAttributeItem",
+                                                "code": "term_1",
+                                                "text": "1年期"
+                                            }
+                                        ],
+                                        "attCode": "policyPeriod",
+                                        "attName": "保险期限",
+                                        "attViewType": "1",
+                                        "className": "ProductAttribute"
+                                    },
+                                    {
+                                        "attValueList": [],
+                                        "attCode": "amount",
+                                        "attName": "保险金额",
+                                        "attViewType": "2",
+                                        "className": "ProductAttribute"
+                                    }
+                                ],
+                                "baseAmount": "1000.0",
+                                "bind": "0",
+                                "bindCode": "",
+                                "bindExtraList": [],
+                                "className": "ProposalProductDef",
+                                "coreCode": "HDT012",
+                                "extraList": [],
+                                "hasCoverage": "1",
+                                "hasService": "false",
+                                "main": "false",
+                                "mutiBenefit": "0",
+                                "productCode": "HDT012",
+                                "productName": "光大永明附加丰盛定期重大疾病保险",
+                                "productShortName": "",
+                                "productType": "0",
+                                "productText": "thunder",
+                                "sell": "false",
+                                "type": "0",
+                                "additional": [
+                                    {
+                                        "@key": "attachment_filter_coverage",
+                                        "#text": "coverage"
+                                    },
+                                    {
+                                        "@key": "ONE_DIMENSION",
+                                        "#text": "health1"
+                                    },
+                                    {
+                                        "@key": "MAIN",
+                                        "#text": "no"
+                                    },
+                                    {
+                                        "@key": "calculate_type",
+                                        "#text": "2"
+                                    },
+                                    {
+                                        "@key": "QXFL",
+                                        "#text": "duanqi"
+                                    },
+                                    {
+                                        "@key": "attachment_coverage",
+                                        "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@4c240de4"
+                                    },
+                                    {
+                                        "@key": "PAY_V",
+                                        "#text": "case(PAY_VALUE > 40.0, PAY_VALUE - AGE, PAY_VALUE)"
+                                    }
+                                ]
+                            }
+                        ],
+                        "hasCoverage": "1",
+                        "hasService": "false",
+                        "main": "true",
+                        "mutiBenefit": "0",
+                        "productCode": "LBT029",
+                        "productName": "光大永明关爱永逸两全保险（2018版）",
+                        "productShortName": "",
+                        "productType": "0",
+                        "productText": "dividend",
+                        "sell": "false",
+                        "type": "0",
+                        "additional": [
+                            {
+                                "@key": "attachment_filter_coverage",
+                                "#text": "coverage"
+                            },
+                            {
+                                "@key": "MAIN",
+                                "#text": "yes"
+                            },
+                            {
+                                "@key": "attachment_benefit_table",
+                                "#text": "[lerrain.project.insurance.product.attachment.table.TableDef@3fb2acb7, lerrain.project.insurance.product.attachment.table.TableDef@6b69430c, lerrain.project.insurance.product.attachment.table.TableTextDef@4bb0ffeb, lerrain.project.insurance.product.attachment.table.TableTextDef@5171c41f, lerrain.project.insurance.product.attachment.table.TableTextDef@402f8ff, lerrain.project.insurance.product.attachment.table.TableTextDef@5f292f67, lerrain.project.insurance.product.attachment.table.TableTextDef@8e74400, lerrain.project.insurance.product.attachment.table.TableTextDef@7216091]"
+                            },
+                            {
+                                "@key": "THREE_DIMENSION",
+                                "#text": "lqlife3"
+                            },
+                            {
+                                "@key": "startAge",
+                                "#text": "0"
+                            },
+                            {
+                                "@key": "attachment_coverage",
+                                "#text": "lerrain.project.insurance.product.attachment.coverage.Coverage@204ad33f"
+                            },
+                            {
+                                "@key": "ONE_DIMENSION",
+                                "#text": "rlife1"
+                            },
+                            {
+                                "@key": "attachment_filter_benefit_table",
+                                "#text": "table"
+                            },
+                            {
+                                "@key": "AA",
+                                "#text": "55"
+                            },
+                            {
+                                "@key": "calculate_type",
+                                "#text": "2"
+                            },
+                            {
+                                "@key": "stopAge",
+                                "#text": "55"
+                            },
+                            {
+                                "@key": "startDay",
+                                "#text": "30"
+                            },
+                            {
+                                "@key": "QXFL",
+                                "#text": "changqi"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

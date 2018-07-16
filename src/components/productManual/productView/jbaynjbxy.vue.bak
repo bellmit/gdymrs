@@ -1,0 +1,253 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+        <Headerbtns :title = page_title>
+            <div slot="left" class="back" @click="pre">
+                <i class="fa fa-angle-left"></i>
+            </div>
+        </Headerbtns>   
+        <div id="maincontent" class="manage-main-contents">
+        <div class="normal_body">
+                <img src="../../../../static/img/productManual/productView/img/image9.jpg" style="width: 100%;" alt="">
+                <div class="product_hot">
+                    <div class="hotProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            产品卖点:
+                        </p>
+                    </div>
+                    <div class="hotProduct_content">
+                        <h4>长久盈——年金稳定领取至80周岁</h4>
+                        <p>通过短期资金投入，可获得至被保险人80周岁的长期保障，为您提供长期稳定现金流，实现长期财务规划，满足不同人生阶段的需求。</p>
+                        <h4>轻松盈——“固定年金+浮动红利”双重回报</h4>
+                        <p>自第五个保险单周年日起至保险单满期前，保证每年按基本保险金额给付年金，稳定回报。您既可灵活选择领取年金，亦可选择留于本公司累积生息。除每年给付固定年金外，公司每年将根据实际经营状况分配红利，助您获得潜在回报，实现财富稳健增值。</p>
+                        <h4>安稳盈——投入资金保证安全</h4>
+                        <p>保险单满期时返还全部已交保险费，保证投入资金100%安全。若被保险人身故，将按合同已交保险费或现金价值的较大者给付身故保险金。</p>
+                        <h4>灵活盈——年金受益人、领取方式自由定</h4>
+                        <p>创新性的提供年金受益人选择权益，业内领先。年金可根据您的意愿至多指定5位受益人及受益份额，一张保单，实现多子女教育规划、资产传承等多项财务规划。年金亦可选择按年或按月领取方式，并可于年金给付前变更领取方式。年领方式，将按基本保险金额给付每期年金；月领方式，将按基本保险金额的8.5%给付每期年金。</p>
+                    </div>
+                </div>
+                <div class="product_juli">
+                    <div class="juliProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            投保举例:
+                        </p>
+                    </div>
+                    <div class="juliProduct_content">
+                        <div class="juliProduct_img">
+                            <img src="../../../../static/img/productManual/男性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                            <div style="display: inline-block;width: 70%">
+                                <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">金先生 35周岁</p>
+                                <p style="color: #fba61b">为自己刚出生满30天的儿子安安购买了“光大永明金保安盈年金保险(分红型)”，合同基本保险金额为13,900元，年交保险费10万元，5年交清。在保险期间内，安安将获得如下保险利益：</p>
+                            </div>
+                        </div>
+                        <br>
+                        <h5><span id="tuoyuan1_span" style="background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 1 &nbsp;</span>自第五个保单周年日起，每年向年金受益人返还13,900元，直至合同满期日的前一个保单周年日；若客户选择月领方式，则每月可领取1181.5元。</h5>
+                        <h5><span id="tuoyuan2_span" style="background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 2 &nbsp;</span>金先生在购买本合同时，默认年金受益人为金先生本人；当到达一定年龄后，金先生可选择将年金受益人变更为安安，由安安每年领取年金。</h5>
+                        <h5><span id="tuoyuan3_span" style="background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 3 &nbsp;</span>若安安生存至60周岁，选择退保，合计退保利益可达到343万（按中档演示分红测算）；<br/>若安安生存至80周岁，合同满期，合计利益可达到645万（按中档演示分红测算）。</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <alert ref="alert"></alert>
+	</div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'jbaynjbxy',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+        document.getElementById('tuoyuan1_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan2_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan3_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

@@ -1,0 +1,256 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+        <Headerbtns :title = page_title>
+            <div slot="left" class="back" @click="pre">
+                <i class="fa fa-angle-left"></i>
+            </div>
+        </Headerbtns>   
+        <div id="maincontent" class="manage-main-contents">
+            <div class="normal_body">
+                <img src="../../../../static/img/productManual/productView/img/image7.jpg" style="width: 100%" alt="">
+                <div class="product_hot">
+                    <div class="hotProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            产品卖点:
+                        </p>
+                    </div>
+                    <div class="hotProduct_content">
+                        <h4>百种疾病，全面呵护</h4>
+                        <p>为客户提供多达80种重疾保障及20种发生几率较高的轻症保障，当风险来临，从容面对。</p>
+                        <h4>三轻三重，多重保障</h4>
+                        <p>轻症及重疾病种均分为三组，最多可达六次赔付。每次轻症保障额度为重大疾病保险金额的25%，六次赔付最高可达重大疾病保额的375%。</p>
+                        <h4>保费豁免，人性设置</h4>
+                        <p>若罹患重大疾病，豁免未交各期保费，仍有两组重疾保障继续，直至合同期满。</p>
+                        <h4>满期返还，兼享红利</h4>
+                        <p>若客户在保障期间内未罹患重疾，合同期满将一次性返还满期保险金。同时本计划有分红功能，客户可灵活选择现金红利、累积生息、抵交保费及增额交清等多种红利领取方式。</p>
+                    </div>
+                    <div class="img_td">
+                    </div>
+                </div>
+
+                <div class="product_juli">
+                    <div class="juliProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            投保举例:
+                        </p>
+                    </div>
+                    <div class="juliProduct_content">
+                        <div class="juliProduct_img">
+                            <img src="../../../../static/img/productManual/女性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                            <div style="display: inline-block;width: 70%">
+                                <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">郝美丽女士 30周岁</p>
+                                <p style="color: #fba61b">为自己选择一份“金保安康健康保险产品计划（2017）”，20年交，保额30万，郝女士获得保障如下</p>
+                            </div>
+                        </div>
+                        <br>
+                        <h5><span id="tuoyuan1_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 1 &nbsp;</span>自合同生效90天后，即拥有30万的重疾保障及7.5万的轻症保障。</h5>
+                        <h5><span id="tuoyuan2_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 2 &nbsp;</span>按照三轻三重的疾病分组，客户最多可以获得 合计112.5万的重疾及轻症赔付。</h5>
+                        <h5><span id="tuoyuan3_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 3 &nbsp;</span>若客户生存至合同满期日，且未罹患合同所列重大疾病，则一次性返还30万满期金。同时客户享有获得红利分配的权利。</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <alert ref="alert"></alert>
+	</div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'jbakjkbxcpjh',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+        document.getElementById('tuoyuan1_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan2_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan3_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

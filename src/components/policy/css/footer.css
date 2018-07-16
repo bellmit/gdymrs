@@ -1,0 +1,31 @@
+.footer-center {
+		height: 50px;
+		width: 100%;
+		background: #698B22;
+		line-height: 50px;
+		text-align: center;
+		color: #FFFFFF;
+		font-weight: bold;
+	}
+	
+	.footer-left {
+		height: 50px;
+		width: 50%;
+		background: #003756;
+		line-height: 50px;
+		text-align: center;
+		color: #FFFFFF;
+		font-weight: bold;
+		float: left;
+	}
+	
+	.footer-right {
+		height: 50px;
+		width: 50%;
+		background: #FFAC00;
+		line-height: 50px;
+		text-align: center;
+		color: #FFFFFF;
+		font-weight: bold;
+		float: left;
+	}

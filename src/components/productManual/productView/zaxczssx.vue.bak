@@ -1,0 +1,256 @@
+<!--
+	产品手册主页
+-->
+<template>
+	<div>
+        <Headerbtns :title = page_title>
+            <div slot="left" class="back" @click="pre">
+                <i class="fa fa-angle-left"></i>
+            </div>
+        </Headerbtns>   
+        <div id="maincontent" class="manage-main-contents">
+            <div class="normal_body">
+                <img src="../../../../static/img/productManual/productView/img/image16.jpg" style="width: 100%;" alt="">
+                <div class="product_hot">
+                    <div class="hotProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            产品卖点:
+                        </p>
+                    </div>
+                    <div class="hotProduct_content">
+                        <h4>体现身价，终身高额保障</h4>
+                        <p>为客户提供高额的身故及高残保障，在风险来临时，为客户及其家人给与最大的关怀，体现客户身价。</p>
+                        <h4>年金选择，养老传承兼顾</h4>
+                        <p>在交费期满，且被保险人50周岁—70周岁期间，客户可行使年金转换权益，作为养老金的有效补充；实现年轻时身价保障，年老时品质晚年生活的功能。</p>
+                        <h4>增额红利，一生财富守护</h4>
+                        <p>我们将依据公司经营情况向客户派发红利，并采取增额交清的方式，逐年提升保障额度，实现身价逐年递增，一定程度上抵御通胀压力。</p>
+                        <h4>私人定制，个性传承安排</h4>
+                        <p>保险金领取方式方面，客户除可采用传统的一次性领取、分期领取，亦可选择信托公司的保险金信托产品，并按照客户的意愿进行管理、分配和使用保险金，实现个性化的传承安排。</p>
+                    </div>
+                </div>
+                <div class="product_juli">
+                    <div class="juliProduct_header">
+                        <p class="orangeTitle" style="margin-left: 3%">
+                            投保举例:
+                        </p>
+                    </div>
+                    <div class="juliProduct_content">
+                        <div class="juliProduct_img">
+                            <img src="../../../../static/img/productManual/男性头像.png"  alt="" style="width: 25%;display: inline-block;padding-top: 10%"  >
+                            <div style="display: inline-block;width: 70%">
+                                <p id="zitibeijing_p" style="background-repeat: round;height: 40px;width: 90%;text-align: center;color: white;line-height: 40px">永明先生 50周岁</p>
+                                <p style="color: #fba61b">在掌管家族企业的同时，还控股着其他领域的3家公司。受宏观调控的深入及产业结构调整影响，永明先生涉猎产业的经营风险渐渐增大。为了防范风险，实现个人资产与企业资产的有效隔离，顺利实现财富传承，更好的管理资产。永明先生选择了《光大永明至爱相传终身寿险（分红型，2017版）》。</p>
+                                <p style="color: #fba61b">保险金额5000万元，选择交费5年，每年缴费5,979,500元，5年累计交费29,897,500元。该计划将为客户带来如下保障。</p>
+                            </div>
+                        </div>
+                        <br>
+                        <h5><span id="tuoyuan1_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 1 &nbsp;</span>经合同生效满180天之日起，客户即具备不低于5000万元的身价保障，并每年伴随着红利分配，保障逐年水涨船高。</h5>
+                        <h5><span id="tuoyuan2_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 2 &nbsp;</span>客户80周岁时，身价保额达到7676万元，客户100周岁时，身价保障可达10537万元（按中档红利假设）。</h5>
+                        <h5><span id="tuoyuan3_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 3 &nbsp;</span>客户在55周岁-70周岁期间，可行使年金选择权益，进行年金的分期领取。</h5>
+                        <h5><span id="tuoyuan4_span" style="background-image: url(../../../../static/img/productManual/椭圆.png);background-repeat: round;color: white;text-align: center;width: 20px">&nbsp; 4 &nbsp;</span>客户亦可选择信托公司的保险金信托产品，由客户和信托公司共同约定，实现身故保险金的个性化的管理、分配和使用。</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <alert ref="alert"></alert>
+	</div>
+</template>
+
+<!--js-->
+<script>
+import { MessageBox } from 'mint-ui'
+import Headerbtns from '../../../../src/components/policy/common/Header'
+import alert from '../../policy/common/alert.vue'
+import picker from '../../common/Picker.vue'
+import imgList from '../../../../static/dict/img_sunlife.json'
+
+export default{
+    name:'zaxczssx',
+    components: {Headerbtns,alert,picker},
+    props: ['value'],
+    data () {
+        return {
+            page_title:'产品手册',
+            selectResult:"1",
+            productObj:{}
+        }
+    },
+    watch:{
+
+    },
+    beforeMount(){
+        this.productObj = this.$route.params.productObj
+    },
+    mounted(){
+        document.getElementById('zitibeijing_p').style.backgroundImage = "url(" + require("../../../../static/img/productManual/zitibeijing.png") + ")"
+        document.getElementById('tuoyuan1_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan2_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan3_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+        document.getElementById('tuoyuan4_span').style.backgroundImage = "url(" + require("../../../../static/img/productManual/椭圆.png") + ")"
+    },
+    methods:{
+        pre(){
+            this.$router.push({
+                name: 'productInfo',
+                params: {
+                    productObj: this.productObj
+                }
+            })
+        },
+        showMsg:function(msg){
+            if(msg!=undefined && msg!=""){
+                this.$refs.alert.showMOdal(msg)
+            }
+        },
+    }
+}
+</script>
+
+<style lang="scss" scoped type="text/css">
+.manage-main-contents{
+  width: 100%;
+  position: absolute;
+  left: 0;right: 0;top: 48px;bottom: 0px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #FFF;
+}
+.fa-search{
+    color:#FFAB00;
+    font-size:25px; 
+}
+.back{
+  display: block;
+  height: 100%;width: 100%;
+  position: relative;
+  img{
+    position: absolute;
+    top: 50%;left: 50%;
+    margin-top: -10px;
+    margin-left: -20px;
+  }
+}
+.fa{
+  color: #03345C;
+}
+.fa-angle-left{
+  display: inline-block;
+  width: 100%;height: 100%;
+  line-height: 48px;
+  text-align: center;
+  font-size: 35px;
+}
+.logo{
+  float:right;
+  color:#FDAA00;
+}
+.lh{line-height:20px;}
+/*列表*/
+ul>li>div>p:nth-child(1){
+
+  color: #FFAC00;
+  background-color:#F8F8F8;
+  border:1px solid #C8C8C8;
+  padding:10px;
+  line-height: 20px;
+}
+.line-bottom p{
+  padding:10px;
+  margin: 0 15px;
+  border-bottom:1px dashed #A9A6A2;
+  line-height: 20px;
+}
+
+
+.contentView {
+    margin-top: 20px;
+}
+
+.head_title {
+    background-color: #654888;
+    border-radius: 5px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    margin-left: 5%;
+    color: white;
+    width: 90%;
+    margin-bottom: 5px;
+}
+
+.ProductType_Orange{
+    font-weight: bold;
+    color: orange;
+    font-size: 17px;
+    width: 70%;
+}
+.productDetail_black{
+    color: black;
+    font-size: 17px;
+    text-align: right;
+    width:80%;
+}
+
+.backButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.backButton img {
+    height: 80px;
+}
+
+
+.hotProduct_header {
+    border-top: solid lightgrey 1px;
+    border-bottom: solid lightgrey 1px;
+    background: #f5f5f5;
+}
+
+.orangeTitle {
+    color: #fba61b;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.hotProduct_content h4 {
+    text-align: center;
+    color: #fba61b;
+}
+
+h4 {
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    -webkit-margin-before: 1.67em;
+    -webkit-margin-after: 1.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.product_juli {
+    width: 100%;
+}
+
+.product_hot {
+    width: 100%;
+}
+</style>

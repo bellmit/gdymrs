@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>光大永明人寿</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="static/css/reset.css">
+    <link rel="stylesheet" href="./static/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/alert.css">
+    <link rel="stylesheet" type="text/css" href="static/css/animate.css">
+    <script src="static/js/jquery-1.9.0.min.js"></script>
+    <script src="static/js/alert.js"></script>
+    <script src="cordova.js"></script>
+    <script src="static/js/anysignWebInterface.js"></script>
+    <script src="static/js/sign_util.js"></script>
+    <script src="static/js/cordova_camera.js"></script>
+    <script src="static/js/cordova_file.js"></script>
+    <script src="static/js/echarts.js"></script>
+    <script src="static/js/echarts_util.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("backbutton", onBackKeyDown, false);
+      function onBackKeyDown(e) {
+         e.preventDefault();
+      }
+    </script>
+    <style type="text/css">
+      	body.modal-open {
+          /* position: fixed; */
+          width: 100%;
+      	}
+        .mint-msgbox{
+          -webkit-transform: translate(-50%, -50%);
+           transform: translate(-50%, -50%);
+        }
+        .mint-popup {
+          -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+       }
+       .mint-actionsheet{
+        transform: translate(-50%,0);
+       }
+       input{
+       	cursor:pointer;
+       }
+       body,
+       #footer-content,
+       #v-header,
+       .manage-main-contents,
+       .item-list,
+       .service-guide,
+       .footer-content
+       {
+       	max-width:1030px!important;
+       	margin:0 auto!important;
+       }
+       #app{
+       	margin:48px 0!important;
+       }
+    </style>
+  </head>
+  <body style="font-size:12px;">
+    <div id="app"></div>
+  </body>
+  <script>
+    $('body').on('click',$('input'),function (e) {
+	    if(e.target.tagName == 'INPUT' && e.target.getAttribute('type')=='text' || e.target.getAttribute('type')=='number' || e.target.getAttribute('type')=='password' || !e.target.getAttribute('type')){
+				e.target.focus();
+			}
+    })
+  </script>
+</html>
